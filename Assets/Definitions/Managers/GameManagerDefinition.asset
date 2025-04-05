@@ -21,3 +21,11 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  _playerPrefab:
+    _prefab: {fileID: 8398248415625499140, guid: fa6016666ee48f141b89cc6dcbe41e48, type: 3}
+  _fishPrefab:
+    _prefab: {fileID: 7665381743005490175, guid: 7704da3e45603e4449c0751827f815b8, type: 3}
+  _goldenFishPrefab:
+    _prefab: {fileID: 7665381743005490175, guid: 7e54c91e7254ab742ba4a2de06f3740f, type: 3}
+  _shadowPrefab:
+    _prefab: {fileID: 7391601481929477719, guid: 92a4be92defede74c9b3be0a9429281b, type: 3}

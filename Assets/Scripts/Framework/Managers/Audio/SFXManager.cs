@@ -12,6 +12,16 @@ namespace Framework.Managers
     public abstract class SFXManager<TDefinition, TSFXKeyEnum> : SFXManager<TDefinition> where TSFXKeyEnum : Enum
         where TDefinition : SFXManagerDefinition<TSFXKeyEnum>
     {
+        public AudioSource PlayGlobalSFX(TSFXKeyEnum key, float pitch)
+        {
+            if (!this._definition.SFXsByKey.TryGetValue(key, out AudioClip sfx))
+            {
+                DebugHelper.LogError(this, $"{key} was not found in the configuration.");
+            }
+
+            return this.PlayGlobalSFX(sfx, pitch);
+        }
+
         public AudioSource PlayGlobalSFX(TSFXKeyEnum key, float minPitch = 1, float maxPitch = 1)
         {
             if (!this._definition.SFXsByKey.TryGetValue(key, out AudioClip sfx))
@@ -26,15 +36,12 @@ namespace Framework.Managers
     public abstract partial class SFXManager<TDefinition> : Manager<TDefinition, SFXManager_PersitentData>
         where TDefinition : SFXManagerDefinition
     {
-        [ShowInInspector] 
+        [ShowInInspector, HideInEditorMode] 
         protected bool _isMuted = false;
 
-        [ShowInInspector]
+        [ShowInInspector, HideInEditorMode]
         [ReadOnly]
         protected List<AudioSource> _audioSources = new();
-
-        [SerializeField] 
-        protected AudioSourceConfigurationDefinition _audioSourceConfiguration;
 
         private TimeManager _timeManager = null;
 
@@ -69,7 +76,7 @@ namespace Framework.Managers
             sfxSource.transform.position = position;
             sfxSource.pitch = pitch * (isSpatialized ? this._timeManager.TimeScale : 1);
 
-            sfxSource.Configure(this._audioSourceConfiguration);
+            sfxSource.Configure(this._definition.AudioSourceConfiguration);
 
             this._audioSources.Add(sfxSource);
 

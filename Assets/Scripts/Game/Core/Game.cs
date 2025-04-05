@@ -20,6 +20,7 @@ namespace Game.Core
         protected override void StartGame()
         {
             this._stateMachine.InjectAction(GameAction.GoToOutgame);
+            this._stateMachine.InjectAction(GameAction.GoToIngame);
         }
 
         protected override void StopGame()

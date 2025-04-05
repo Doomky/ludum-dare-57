@@ -24,6 +24,7 @@ namespace Framework.Databases
             return null;
         }
 
+#if UNITY_EDITOR
         private IEnumerable<Type> Editor_GetAllMissingIDs()
         {
             return AppDomain.CurrentDomain
@@ -53,5 +54,6 @@ namespace Framework.Databases
                 this.Editor_CreateAndAdd(type);
             }
         }
+#endif
     }
 }

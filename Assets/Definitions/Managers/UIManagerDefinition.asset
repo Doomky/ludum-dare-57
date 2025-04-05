@@ -21,4 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  _canvasPrefabs: []
+  _canvasPrefabs:
+  - _prefab: {fileID: 4725587356077227289, guid: 776eb71738c4cbd4cbcf6090004f76bd, type: 3}
+  - _prefab: {fileID: 8159243773993960766, guid: 688a6eaa4aa484049ada770a25906dc0, type: 3}

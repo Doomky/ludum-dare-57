@@ -408,7 +408,7 @@ namespace Game.UI
                     if (sfxTimer.IsTriggered())
                     {
                         float pitch = Mathf.Lerp(startingPitch, endPitch, normalizedValueDelta);
-                        this._sfxManager.PlayGlobalSFX(SFXKey.Pop, pitch);
+                        //this._sfxManager.PlayGlobalSFX(SFXKey.Pop, pitch);
                         sfxTimer.Reset();
                     }
                 }

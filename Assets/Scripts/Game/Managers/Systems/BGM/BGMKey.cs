@@ -3,7 +3,6 @@
     public enum BGMKey
     {
         MainMenu        = 0,
-        NewGame         = 1,
-        Boss            = 2,
+        InGame          = 1,
     }
 }
