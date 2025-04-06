@@ -35,6 +35,14 @@ namespace Framework.Managers.Audio
 
         public bool IsPlaying => this._audioSource.isPlaying;
 
+        public override void Load()
+        {
+            base.Load();
+
+            this._audioSource = this.gameObject.AddComponent<AudioSource>();
+            this._audioSource.loop = true;
+        }
+
         public void Mute()
         {
             if (!this._isMuted)

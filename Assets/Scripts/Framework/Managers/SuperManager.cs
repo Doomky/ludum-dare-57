@@ -100,7 +100,9 @@ namespace Framework.Managers
             this._layers.Add(managerLayer);
 
             managerLayer.Load(managerLayerDefinition, superDatabase);
-
+            
+            Debug.Log($"Loading {managerLayerDefinition.name}");
+            
             this.LayerLoaded?.Invoke(managerLayer);
         }
 

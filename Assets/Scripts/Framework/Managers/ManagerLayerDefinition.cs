@@ -14,11 +14,11 @@ namespace Framework.Managers
     {
 #if UNITY_EDITOR
         [ValueDropdown(nameof(GetTypeDropdownValue))]
-        [NonSerialized, OdinSerialize]
 #endif
+        [NonSerialized, OdinSerialize]
         private Type[] _managers = new Type[0];
 
-        public Type[] Managers => _managers;
+        public Type[] Managers => this._managers;
 
         public bool Contains(Type type)
         {

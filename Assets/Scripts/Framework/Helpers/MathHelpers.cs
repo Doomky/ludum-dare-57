@@ -1,30 +1,12 @@
 ﻿using UnityEngine;
-using Framework;
-using Framework.Managers;
 
 namespace Framework.Helpers
 {
-
     public static class MathHelpers
     {
         public static float OffsetFraction(float a, float b, float offset)
         {
             return (a + offset) / (b + offset);
-        }
-
-        public static bool TestProbability(float probability)
-        {
-            if (probability >= 1)
-            {
-                return true;
-            }
-
-            if (probability <= 0)
-            {
-                return false;
-            }
-
-            return Random.Range(0f, 1f) <= probability;
         }
         
         /// <summary>

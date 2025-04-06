@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2212131249411659833}
   - component: {fileID: 4061015712231914636}
   - component: {fileID: 5511237681453712157}
+  - component: {fileID: 3915265280135942328}
   m_Layer: 0
   m_Name: Urchin
   m_TagString: Untagged
@@ -227,3 +228,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3915265280135942328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732457093478099954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4162bbe93e4b33428d433003ec7691c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _maxHealth: 1
+  _movementSpeed: 0.5
+  _hitBPSPrefab:
+    _prefab: {fileID: 7137123329796465632, guid: 96d6e7b9f489e26449405b2c54dffe51, type: 3}
+  _DeathBPSPrefab:
+    _prefab: {fileID: 7137123329796465632, guid: 96d6e7b9f489e26449405b2c54dffe51, type: 3}
+  _hurtSFX: 4
+  _deathSFX: 5

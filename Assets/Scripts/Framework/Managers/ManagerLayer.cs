@@ -24,7 +24,7 @@ namespace Framework.Managers
 
             Type[] managerTypes = this._definition.Managers;
             
-            int managerTypesCount = managerTypes?.Length ??0;
+            int managerTypesCount = managerTypes?.Length ?? 0;
             for (int i = 0; i < managerTypesCount; i++)
             {
                 Type managerType = managerTypes[i];
@@ -40,16 +40,24 @@ namespace Framework.Managers
                 Entry entry = new(managerType, manager);
 
                 this._entries.Add(entry);
+
+                Debug.Log($"Creating: {manager.gameObject.name}");
             }
 
             for (int i = 0; i < managerTypesCount; i++)
             {
-                this._entries[i].Manager.Load();
+                Manager manager = this._entries[i].Manager;
+                manager.Load();
+
+                Debug.Log($"Loading: {manager.gameObject.name}");
             }
 
             for (int i = 0; i < managerTypesCount; i++)
             {
-                this._entries[i].Manager.PostLayerLoad();
+                Manager manager = this._entries[i].Manager;
+                manager.PostLayerLoad();
+
+                Debug.Log($"Post loading: {manager.gameObject.name}");
             }
         }
 
